@@ -47,15 +47,33 @@
   * Combined JOIN with `WHERE` to filter employees earning > 50,000.
 * Learned to use **table aliases** to simplify queries.
 
+Great idea! Here's your updated SQL learning journey:
+
 ---
 
-### **What skills you’ve learned**
+### **7. Advanced LIMIT with OFFSET**
+* `LIMIT 1 OFFSET 1` → found the second highest salary
+* Learned to skip rows and get specific positioned results
 
-* Selecting all/specific columns
-* Filtering with `WHERE`
-* Sorting and limiting results
-* Aggregation with `SUM`, `AVG`, and `GROUP BY`
-* JOINing tables and combining with filters
-* Using table aliases for cleaner queries
+---
+
+### **8. Subqueries**
+* Used subqueries to compare against calculated values:
+  * `WHERE salary > (SELECT AVG(salary) FROM employees)`
+* Found employees earning more than average salary
+
+---
+
+### **9. Correlated Subqueries**  
+* Advanced subqueries that reference the outer query:
+  * `WHERE salary > (SELECT AVG(salary) FROM employees e2 WHERE e2.department = e1.department)`
+* Compared each employee to their department's average
+
+---
+
+### **10. COUNT Function & HAVING Clause**
+* `COUNT(name)` to count employees per department
+* `HAVING COUNT(name) > 1` to filter grouped results
+* Learned difference between WHERE (filters rows) vs HAVING (filters groups)
 
 ---
